@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 int relay = 10; //릴레이에 5V 신호를 보낼 핀설정
 int x = 5; // 릴레이를 켰다 껏다 할 횟수 5를 변수 x에 저장
 
@@ -98,3 +99,105 @@ Serial.println(" C");
 따라서 여름철 건강한 온도와 습도는 26℃ / 40% 로 잡는 걸 권장합니다.
 
 
+=======
+int relay = 10; //릴레이에 5V 신호를 보낼 핀설정
+int x = 5; // 릴레이를 켰다 껏다 할 횟수 5를 변수 x에 저장
+
+
+void setup ()
+{
+  pinMode (relay, OUTPUT); // relay를 output으로 설정한다.
+}
+
+
+void loop (){
+for ( int i=0; i==x; i++){ relayOnoff(); } //relay를 x번 On Off
+}
+
+
+void relayOnoff(){ // relay를 On Off하는 함수
+  digitalWrite (relay, HIGH); // 릴레이 ON
+  delay (500);              //0.5초 delay
+  digitalWrite (relay, LOW); // 릴레이 OFF
+  delay (500);               //0.5초 delay
+}
+
+
+int Relay = 2;
+void setup() {
+  pinMode(Relay,OUTPUT); 
+}
+void loop() {
+  for(int i=0;i<=1;i++) {
+    digitalWrite(Relay,i);
+    delay(1000);
+  }
+} 
+
+
+int Relay = 2; 
+int Botton = 3; 
+ void setup() {
+   pinMode(Relay,OUTPUT);
+   pinMode(Botton,INPUT);
+ }
+ void loop() {
+   if (digitalRead(Botton)==HIGH) {
+     digitalWrite(Relay,HIGH);
+   }
+   else {
+     digitalWrite(Relay,LOW);
+   }
+ } 
+
+
+//s the setup function runs once when you press reset or power the borad
+void setup() {
+// initialize digital pin 13 as an out put.
+	pinMode(2, OUTPUT);
+	pinMode(3, OUTPUT);
+	digitalWrite(2, HIGH);	// Relay Off
+	digitalWrite(3, HIGH);	// Relay Off
+}
+
+void loop()
+{
+	digitalWrite(2, HIGH);	// Relay Off
+	digitalWrite(3, HIGH);	// Relay Off
+	delay(1000);
+	digitalWrite(2, LOW);	// Relay On
+	digitalWrite(3, LOW);	// Relay On
+	delay(1000);
+}
+
+
+#include "DHT.h"       // DHT.h 라이브러리를 포함한다
+#define DHTPIN 2      // DHT핀을 2번으로 정의한다(DATA핀)
+#define DHTTYPE DHT11  // DHT타입을 DHT11로 정의한다
+DHT dht(DHTPIN, DHTTYPE);  // DHT설정 - dht (디지털2, dht11)
+
+void setup() {
+Serial.begin(9600);    // 9600 속도로 시리얼 통신을 시작한다
+}
+
+void loop() {
+delay(2000);
+int h = dht.readHumidity();  // 변수 h에 습도 값을 저장 
+int t = dht.readTemperature();  // 변수 t에 온도 값을 저장
+Serial.print("Humidity: ");  // 문자열 Humidity: 를 출력한다.
+Serial.print(h);  // 변수 h(습도)를 출력한다.
+Serial.print("%\t");  // %를 출력한다
+Serial.print("Temperature: ");  // 이하생략
+Serial.print(t);
+Serial.println(" C");
+}
+
+
+적정 습도는 온도에 따라 달라지는데,
+15℃에서는 70%, 18~10℃에서는 60%, 21~23℃에서는 50%, 24℃ 이상일 때는 40%가 알맞습니다.
+적정 실내온도가 다소 덥게 느껴질 수 있지만, 같은 온도라도 습도를 낮추면 체감온도가 낮아져 훨씬 쾌적합니다.
+그리고 여름엔 얇은 옷을 입기 때문에 체감온도가 냉방기에 표시되는 온도보다 낮다는 사실도 고려해야 합니다.
+따라서 여름철 건강한 온도와 습도는 26℃ / 40% 로 잡는 걸 권장합니다.
+
+
+>>>>>>> d66d2d7b99060b2779d1803ed76b7af6eaa0ceb5
