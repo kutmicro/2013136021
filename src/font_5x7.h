@@ -219,6 +219,4 @@ const char font[][5] = {		// basic font
 	,{0x00, 0x06, 0x09, 0x09, 0x06} // 7f Deg Symbol
 };
 
-
->>>>>>> ea8639d3de62541a21d7b46a942825c26783ad2e
 #endif /* FONT_5X7_H_ */

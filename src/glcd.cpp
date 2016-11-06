@@ -1210,4 +1210,3 @@ int main(void)
 		Clr(); 
 	} 
 }
->>>>>>> ea8639d3de62541a21d7b46a942825c26783ad2e
