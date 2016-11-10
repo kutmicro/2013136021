@@ -1,3 +1,5 @@
+#include <LiquidCrystal.h>
+
 LiquidCrystal lcd(5, 6, 7, 8, 9, 10);
 
 void setup() {
