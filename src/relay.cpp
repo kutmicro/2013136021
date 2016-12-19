@@ -9,7 +9,7 @@ void setup ()
 
 
 void loop (){
-	for ( int i=0; i==x; i++){ relayOnoff(); } //relay를 x번 On Off
+	for ( int i=0; i<x; i++){ relayOnoff(); } //relay를 x번 On Off
 }
 
 

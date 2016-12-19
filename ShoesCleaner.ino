@@ -90,7 +90,6 @@ int selectMenu() {
     }
     
     bCnt = bCnt % 2;                    // 버튼 카운트 수 계산 (0 or 1)
-    Serial.println(bCnt);
 
     if(cBtState && cBt == 1) {          // 중앙 버튼이 눌렸다가 떨어지면 (버튼 1회 눌림)
       lBtState = false;                 // 왼쪽 버튼 상태를 false로 초기화
